@@ -1,0 +1,11 @@
+<% @media.each do | media | %>
+	<div id="mediaBox">
+		<h2><%= media.name %><h2>
+		<% if media.link_type.downcase == "youtube" %>
+			<iframe width="500" height="300" src= <%= media.link %> frameborder="0" allowfullscreen></iframe>
+
+		<% elsif media.link_type.downcase == "vine" %>
+			<iframe src=<%= media.link %> width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+		<% end %>
+	</div>
+<% end %>

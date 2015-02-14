@@ -1,0 +1,39 @@
+<div id="showArticleWrapper">
+	<div id="showArticle">
+		<p id="article_updateTime"><%= @article.updated_at %></p>
+		<h3 id="showArticle_Title"><%= @article.title %></h3>
+		
+		<h4 id="showArticle_Description"><%= @article.description %></h4>
+		
+		<% if @article.image_filename.present? %>
+			<%= image_tag @article.image_filename %>
+		<% else %>
+			<%= image_tag "default.png" %>
+		<% end %>
+
+		<p id="article_information"><%= @article.information %></p> 
+		
+
+		<div id="commentBlock">
+			<%= text_area_tag(:message, "Hi, nice site", size: "55x6") %>
+			<%= submit_tag("Comment", class: "articleCommentButton") %>
+		</div>
+
+	</div>
+
+	<div id="showPageAdBlock">
+		<%= image_tag "ad.png" %>
+	</div>
+
+	<div id="recentPostBlock">
+		<h2>Recent Articles</h2>
+		<ul>
+			<% @recentArticle.each do | r | %>
+				<li><%= link_to r.title, r %></li>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class="clear"></div>
+
+</div>

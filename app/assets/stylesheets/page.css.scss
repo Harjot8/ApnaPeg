@@ -1,0 +1,71 @@
+// Place all the styles related to the page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#mediaShowPage{
+	margin: 0 auto;
+	width:800px;
+	border-left:10px solid #F4F4F4;
+	border-right:10px solid #F4F4F4;
+	background-color:white;
+	padding:10px;
+	height:100%;
+
+	#mediaBlock{
+		width:500px;
+		margin:0 auto;
+	}
+
+	#mediaBox{
+		width:500px;
+		margin:0 auto;
+		border-bottom:2px solid #CFCFCF;
+		margin:10px;
+	}
+
+	#mediaSearch{
+		margin-top:-60px;
+		margin-left:180px;
+		margin-bottom:20px;
+	}
+
+	#mediaSearch .mediaTextField{
+		background-color:#E8E8E8;
+		border:5px solid gray;
+		padding:5px;
+		width:300px;
+		height:30px;
+	}
+
+	#mediaSearch .mediaTextField:focus{
+		background-color:black;
+		color:white;
+	}
+
+	.mediaSearchButton {
+		background: #3498db;
+		background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+		background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+		background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+		background-image: -o-linear-gradient(top, #3498db, #2980b9);
+		background-image: linear-gradient(to bottom, #3498db, #2980b9);
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0px;
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 20px;
+		padding: 10px 20px 10px 20px;
+		text-decoration: none;
+	}
+
+	.mediaSearchButton:hover {
+		background: #12fc35;
+		background-image: -webkit-linear-gradient(top, #12fc35, #49913a);
+		background-image: -moz-linear-gradient(top, #12fc35, #49913a);
+		background-image: -ms-linear-gradient(top, #12fc35, #49913a);
+		background-image: -o-linear-gradient(top, #12fc35, #49913a);
+		background-image: linear-gradient(to bottom, #12fc35, #49913a);
+		text-decoration: none;
+	}
+}

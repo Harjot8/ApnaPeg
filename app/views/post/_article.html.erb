@@ -1,0 +1,13 @@
+<% @articles.each do | article | %>
+	<div class="article">
+		<% if article.image_filename.present? %>
+			<%= link_to image_tag(article.image_filename), article %>
+		<% else %>
+			<%= link_to image_tag("default.png"), article %>
+		<% end %>
+
+		<h1 class="article_Title"><%= link_to article.title, article %></h1>
+
+		<p class="article_subtitle"><%= article.description %></p>
+	</div>
+<% end %>

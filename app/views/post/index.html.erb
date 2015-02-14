@@ -1,0 +1,36 @@
+	<div>
+	 	<ul class="rslides">
+	  		<li><%= image_tag "image1.jpg" %></li>
+	  		<li><%= image_tag "image2.jpg" %></li>
+	  		<li><%= image_tag "image3.jpg" %></li>
+		</ul>
+	</div>
+
+<!-- jQuery -->
+<script>
+	$(function() {
+		$(".rslides").responsiveSlides();
+	});
+</script>
+
+<div id="mainContainer">
+
+	<div id="bodyWrapper">
+		<div id="articleWrapper">
+			<div>
+				<%= render "article" %>
+			</div>
+		</div>
+
+		<div id="apnaMessage">
+			<h3>ApnaPeg Message</h3>
+			<p>asdasdadasdddddddddddddddddddddddddsadddddddddd</p>
+		</div>
+
+		<div id="homePageAdBlock">
+			<%= image_tag "ad.png" %>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div id="mediaShowPage">
+	<div id="pageBody">
+		<h2>Search Results for '<%= params[:mediaSearch] %>'</h2>
+		<div id="mediaSearch">
+			<%= form_tag mediaSearch_path, method: :get do %>
+			<%= text_field_tag :mediaSearch, nil, placeholer: 'Enter media', class: 'mediaTextField' %>
+			<%= submit_tag 'Search', class: 'mediaSearchButton' %>
+			<% end %>
+		</div>
+		<% if @media.size.zero? %>
+			<p>No Product Found.</p>
+		<% else %>
+			<div id="mediaBlock">
+				<p><%= @media.count %> results</p>
+				<%= render "media" %>
+			</div>
+		<% end %>
+	</div>
+</div>

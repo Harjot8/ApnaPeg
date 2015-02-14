@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ApnaPeg</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://stratus.sc/stratus.js"></script>
+  <%= favicon_link_tag 'ApnapegLogo.png', rel: 'logo', type: 'image/png' %>
+</head>
+<body>
+
+<%= render 'shared/header' %>
+<%= yield %>
+<%= render 'shared/footer' %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $.stratus({
+       auto_play: false,
+       download: false,
+       links: 'https://soundcloud.com/djksr',
+       random: true
+  	});
+  });
+</script>
+</body>
+</html>

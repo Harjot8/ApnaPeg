@@ -1,0 +1,20 @@
+<div id="mediaShowPage">
+	<% if @page.name.downcase == "Media".downcase %>
+		<h1><%= @page.name %></h1>
+
+		<div id="mediaSearch">
+			<%= form_tag mediaSearch_path, method: :get do %>
+			<%= text_field_tag :mediaSearch, nil, placeholer: 'Enter media', class: 'mediaTextField' %>
+			<%= submit_tag 'Search', class: 'mediaSearchButton' %>
+			<% end %>
+		</div>
+
+		<div id="mediaBlock">
+			<%= render "media" %>
+		</div>
+	<% elsif @page.name.downcase == "About".downcase %>
+		<%= render "about" %>
+	<% elsif @page.name.downcase == "Contact".downcase %>
+		<%= render "contact" %>
+	<% end %>
+</div>
