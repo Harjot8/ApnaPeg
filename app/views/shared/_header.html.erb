@@ -1,24 +1,34 @@
+<!-- jQuery -->
+<script>
+	$(function() {
+		$(".rslides").responsiveSlides();
+	});
+</script>
+
 <header id="mainHeader">
 	<%= link_to image_tag("ApnapegLogo_2.png", class: "apnaPegLogo"), root_path %>
-
-	<h1 id="welcomeTitle"><%= link_to "APNA", root_path %>PEG</h1>
-
-	<div id="socialMediaBlock">
-		<%= link_to image_tag("facebook_icon.png", size: "6x8", alt: "ApnaPeg Facebook", class: "facebook_icon"), "https://www.facebook.com/pages/ApnaPeg/823461497714054?ref=aymt_homepage_panel" %> 
-		<%= link_to image_tag("twitter_icon.png", size: "6x8", alt: "ApnaPeg Twitter", class: "twitter_icon"), "https://twitter.com/ApnaPeg" %> 
-		<%= link_to image_tag("instagram_icon.png", size: "6x8", alt: "ApnaPeg Instagram", class: "instagram_icon"), "http://instagram.com/apnapeg/" %> 
-	</div>
-
-	<div class="clear"></div>
-	<nav class="responsiveNav">
-		<ul class="clearfix">
-			<li class='active'><%= link_to "Home", root_path %></li>
+	
+	<nav id="mainNavigation">
+		<ul id="mainNavigationUL">
+			<li><%= link_to "Home", root_path %></li>
 			<% @pages.each do | page | %>
 				<li><%= link_to page.name, page_path(id: page.id, slug: page.slug) %></li>
 			<% end %>
 		</ul>
-		<a href="#" id="pull">Menu</a>
 	</nav>
-
-
+	
+	<div id="socialMediaBlock">
+		<%= link_to image_tag("facebook_icon.png", size: "40x40", alt: "ApnaPeg Facebook", class: "facebook_icon"), "https://www.facebook.com/pages/ApnaPeg/823461497714054?ref=aymt_homepage_panel" %> 
+		<%= link_to image_tag("twitter_icon.png", size: "40x40", alt: "ApnaPeg Twitter", class: "twitter_icon"), "https://twitter.com/ApnaPeg" %> 
+		<%= link_to image_tag("instagram_icon.png", size: "40x40", alt: "ApnaPeg Instagram", class: "instagram_icon"), "http://instagram.com/apnapeg/" %> 
+	</div>
+	
+	<div id="mainSlideShow">
+	 	<ul class="rslides">
+	  		<li><%= image_tag "image1.jpg" %></li>
+	  		<li><%= image_tag "image2.jpg" %></li>
+	  		<li><%= image_tag "image3.jpg" %></li>
+		</ul>
+	</div>
+	
 </header>

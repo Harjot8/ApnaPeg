@@ -12,13 +12,6 @@
 		<% end %>
 
 		<p id="article_information"><%= @article.information %></p> 
-		
-
-		<div id="commentBlock">
-			<%= text_area_tag(:message, "Hi, nice site", size: "55x6") %>
-			<%= submit_tag("Comment", class: "articleCommentButton") %>
-		</div>
-
 	</div>
 
 	<div id="showPageAdBlock">
